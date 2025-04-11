@@ -10,10 +10,10 @@ public class Main {
             if (!correo.contains("@")) {
                 throw new ExcepcionSimbolo("Debe tener el símbolo @");
             }
-            if (!correo.endsWith(".com") && !correo.endsWith(".es")) {
+            else if (!correo.endsWith(".com") && !correo.endsWith(".es")) {
                 throw new ExcepcionDominio("El correo debe terminar en .com o .es");
             }
-            if (Character.isDigit(inicial)) {
+            else if (Character.isDigit(inicial)) {
                 throw new ExcepcionInicio("El correo no puede empezar por número");
             }
         } catch (ExcepcionSimbolo | ExcepcionDominio | ExcepcionInicio c) {
